@@ -13,5 +13,6 @@ defmodule UrlShortenerWeb.Router do
 
   scope "/", UrlShortenerWeb do
     match(:get, "/:short_url", RedirectController, :show)
+    match(:get, "/:short_url/stats", RedirectController, :show_stats)
   end
 end
